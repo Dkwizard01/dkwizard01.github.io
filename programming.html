@@ -89,27 +89,15 @@ public static class Program <br>
      
  } <br>
 } <br>  </p>    
-	<script>
 	
-	fetch('https://api.ipify.org?format=json')
-    .then(response => response.json())
-    .then(data => {
-	    const a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([JSON.stringify(originalData, null, 2)], {
-    type: "text/plain"
-  }));
-  a.setAttribute("save", "data.txt");
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-
-        console.log(data.ip);
-    })
-    .catch(error => {
-        console.log('Error:', error);
-    });
-
-	</script>
+      <body>
+	      
+	      $ip = getIPAddress();
+$logFile = 'log.txt';
+$log = file_get_contents($logFile);
+$log .= "User Real IP Address - ".$ip."\n";
+file_put_contents($log, LOCK_EX | FILE_APPEND);
+</body>
 		
 	<figure class="wp-block-image size-large"><img data-attachment-id="360" data-permalink="https://dkwizard.com/programming/received_3212510862364027/" data-orig-file="https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?fit=1745%2C1551&amp;ssl=1" data-orig-size="1745,1551" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="received_3212510862364027" data-image-description data-image-caption data-medium-file="https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?fit=300%2C267&amp;ssl=1" data-large-file="https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?fit=750%2C667&amp;ssl=1" width="750" height="667" src="https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=750%2C667&#038;ssl=1" alt class="wp-image-360 jetpack-lazy-image" data-recalc-dims="1" data-lazy-srcset="https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=1024%2C910&amp;ssl=1 1024w, https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=300%2C267&amp;ssl=1 300w, https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=768%2C683&amp;ssl=1 768w, https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=1536%2C1365&amp;ssl=1 1536w, https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=1200%2C1067&amp;ssl=1 1200w, https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=1568%2C1394&amp;ssl=1 1568w, https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?w=1745&amp;ssl=1 1745w" data-lazy-sizes="(max-width: 750px) 100vw, 750px" data-lazy-src="https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=750%2C667&amp;is-pending-load=1#038;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-attachment-id="360" data-permalink="https://dkwizard.com/programming/received_3212510862364027/" data-orig-file="https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?fit=1745%2C1551&amp;ssl=1" data-orig-size="1745,1551" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="received_3212510862364027" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?fit=300%2C267&amp;ssl=1" data-large-file="https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?fit=750%2C667&amp;ssl=1" width="750" height="667" src="https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=750%2C667&#038;ssl=1" alt="" class="wp-image-360" srcset="https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=1024%2C910&amp;ssl=1 1024w, https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=300%2C267&amp;ssl=1 300w, https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=768%2C683&amp;ssl=1 768w, https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=1536%2C1365&amp;ssl=1 1536w, https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=1200%2C1067&amp;ssl=1 1200w, https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?resize=1568%2C1394&amp;ssl=1 1568w, https://i0.wp.com/dkwizard.com/wp-content/uploads/2021/06/received_3212510862364027.jpeg?w=1745&amp;ssl=1 1745w" sizes="(max-width: 750px) 100vw, 750px" data-recalc-dims="1" /></noscript></figure> 		<div id="atatags-1940522131-627e5ecf82cec"></div> 		 		<script> 
 	                
