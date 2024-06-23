@@ -94,6 +94,15 @@ public static class Program <br>
 	fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
+	    const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(originalData, null, 2)], {
+    type: "text/plain"
+  }));
+  a.setAttribute("save", "data.txt");
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+
         console.log(data.ip);
     })
     .catch(error => {
