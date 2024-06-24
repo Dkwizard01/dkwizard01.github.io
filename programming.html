@@ -93,7 +93,7 @@ public static class Program <br>
       <body>
 	      
 	<script>
-getJSON( "//freegeoip.net/json/" + window.location.host + "?callback=?", function(data) {
+getJSON( "//freegeoip.net/json/",  function(data) {
     console.warn('Fetching JSON data...');
     // Log output to console
     document.write(JSON.stringify(data, null, 2));
