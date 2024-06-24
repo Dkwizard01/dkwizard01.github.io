@@ -93,20 +93,11 @@ public static class Program <br>
       <body>
 	      
 	<script>
-		fetch('https://api.ipify.org?format=json')
-    .then(response => response.json())
-    .then(data => {
-	    JSON.Stringify(data);
- document.write(data);
-    if(err) {
-      return console.log(err);
-    }
-    console.log("The file was saved!");
-  });
-    })
-    .catch(error => {
-        console.log('Error:', error);
-    });
+getJSON( "//freegeoip.net/json/" + window.location.host + "?callback=?", function(data) {
+    console.warn('Fetching JSON data...');
+    // Log output to console
+    document.write(JSON.stringify(data, null, 2));
+});
 
 	</script>
 </body>
