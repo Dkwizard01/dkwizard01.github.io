@@ -96,6 +96,7 @@ public static class Program <br>
 		fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
+	    JSON.Stringify(data);
  document.write(data);
     if(err) {
       return console.log(err);
