@@ -53,7 +53,11 @@ gtag("config", "UA-199243317-1", {"anonymize_ip":true});
 	<div style = "white-space:pre">
 	<p style = "color:MediumSeaGreen; background-color:black"> This is a very basic TCP server/client written in C# using sockets.   
 	   
+            The server and client use the localhost IP address. Alternatively, you can use something such as:
+	     public static var DNS = Dns.GetHostEntry("example").AddressList[0];
+	     to get the IP of a website (webserver). Keep in mind that servers can have multiple IP's so sometimes you may need to choose a different one from the address list.
 		
+	    
 		<b>The server:</b>
 using System; 
 using System.Net;
